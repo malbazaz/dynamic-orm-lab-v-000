@@ -60,8 +60,9 @@ def self.find_by(value)
 
     sql = "SELECT * FROM #{self.table_name} WHERE #{column} = '#{value.flatten[1]}'"
     #binding.pry
-    DB[:conn].execute(sql)
+  hello =  DB[:conn].execute(sql)
   end
+  hello
   end
 
 end
