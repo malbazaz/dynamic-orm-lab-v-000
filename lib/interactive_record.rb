@@ -55,8 +55,9 @@ end
 
 def self.find_by(value)
   column_names.each do |column|
-  sql = "SELECT * FROM #{self.table_name} WHERE #{column} = #{value}"
-  DB[:conn].execute(sql)
+    sql = "SELECT * FROM #{self.table_name} WHERE #{column} = #{value}"
+    DB[:conn].execute(sql)
+  end
 end
 
 end
