@@ -62,7 +62,7 @@ def self.find_by(value)
       hello = DB[:conn].execute(sql)
     end
   end
-    hello 
+    hello
 end
 
 end
