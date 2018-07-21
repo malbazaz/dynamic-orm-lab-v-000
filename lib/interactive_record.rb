@@ -54,11 +54,12 @@ def self.find_by_name(name)
 end
 
 def self.find_by(value)
-  binding.pry
+  #binding.pry
   column_names.each do |column|
     sql = "SELECT * FROM #{self.table_name} WHERE #{send(column)} = #{value.flatten[1]}"
     DB[:conn].execute(sql)
   end
+
 end
 
 end
