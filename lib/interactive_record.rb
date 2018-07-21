@@ -57,11 +57,11 @@ def self.find_by(value)
   #binding.pry
   column_names.each do |column|
     if column = value.flatten[0].to_s
-      prime_key = column
-    end
-    sql = "SELECT * FROM #{self.table_name} WHERE #{prime_key} = '#{value.flatten[1]}'"
+
+    sql = "SELECT * FROM #{self.table_name} WHERE #{column} = '#{value.flatten[1]}'"
     #binding.pry
     DB[:conn].execute(sql)
+  end
   end
 
 end
